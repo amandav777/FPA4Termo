@@ -22,7 +22,7 @@ export default {
   name: 'ProductCard',
   data() {
     return {
-      products: [ // Aqui corrigi o nome de product para products
+      products: [ 
         {
           id: 'blackHeadset',
           itemWeightLabel: 'Item Weight',
@@ -75,6 +75,20 @@ export default {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../assets/images/pinkHeadset.png) lightgray 50% / cover no-repeat;
 }
 
+
+.productDetails {
+  display: flex;
+  width: 14.125rem;
+  padding: 0.875rem 1rem;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 3.5rem;
+  background: rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(27px);
+}
+
+/* assets de texto abaixo! :) */
+
 .body2 {
   color: var(--White-white-50, #FFF);
   text-align: center;
@@ -96,18 +110,6 @@ export default {
   letter-spacing: -0.01rem;
   margin: 0;
 }
-
-.productDetails {
-  display: flex;
-  width: 14.125rem;
-  padding: 0.875rem 1rem;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 3.5rem;
-  background: rgba(0, 0, 0, 0.10);
-  backdrop-filter: blur(27px);
-}
-
 h4 {
   color: var(--White-white-50, #FFF);
   font-family: Inter;
@@ -118,6 +120,8 @@ h4 {
   letter-spacing: -0.15rem;
   width: 24.3125rem;
 }
+
+/* fim das assets de texto */
 
 .weightDetails {
   display: flex;
