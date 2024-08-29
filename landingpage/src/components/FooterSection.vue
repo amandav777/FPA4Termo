@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <div class="mainTitle">
+        <div class="content">
+            <div class="mainTitle">
             <img src="../assets/images/logo_gabini.png" alt="Footer Logo">
         </div>
         <div class="menuGrid">
@@ -34,8 +35,11 @@
             <div class="emailInput">
                 <h2>Subscribe to newsletter</h2>
                 <p>Sign up for exclusive offers, original
-                    stories, events and more</p>
-                <button>Subscribe</button>
+                   <br> stories, events and more</p>
+                <div class="inputWrapper">
+                    <input type="email" placeholder="Email Address">
+                    <img src="..\assets\icons\enterButton.png" alt="Submit Button">
+                </div>
             </div>
         </div>
         <footer>
@@ -45,54 +49,57 @@
                     <li>PRODUCTS</li>
                     <li>PRIVACY POLICY</li>
                     <li>CUSTOMER SERVICES</li>
+                    <li class="socialMedia"><img src="..\assets\icons\socialmedia.png" alt=""></li>
                 </ul>
             </div>
             <div class="secondLogo">
                 <img src="../assets/images/Logo_gabini_cinza.png" alt="Second Footer Logo">
             </div>
         </footer>
+        </div>
+       
     </div>
 </template>
-<script></script>
-<style scoped>
 
-/* Fundo */
+<script></script>
+
+<style scoped>
 .container {
     border-radius: 30px;
     background-color: black;
-    width: 1400px;
-    height: 734px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
 }
 
-/* Logo 1 */
+.content {
+    padding: 50px;
+}
+
 .mainTitle {
+    padding: 10px;
     position: relative;
     width: 204px;
     height: 39px;
-    left: 80px;
-    top:-50px;
-} 
-
-/* Seção de Menus */
-.menuGrid{
-    display: flex;
-    position: relative;
-    gap: 50px;
-    top: 18px;
-    left: 80px;
-
-}  
-.menuGrid h2{
-    color: white;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 28px;
-    
-    
+    margin-bottom: 20px;
 }
-.menuGrid p{
+
+.menuGrid {
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menuGrid h2 {
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menuGrid p {
     color: #B0B0B0;
     font-family: Inter;
     font-weight: 400;
@@ -100,55 +107,118 @@
     font-style: normal;
     line-height: 21px;
     text-align: justify;
-
+    margin: 0;
 }
-.menuGrid ul{
+
+.menuGrid ul {
     list-style-type: none;
     padding: 0;
 }
-.menuGrid ul li{
+
+.menuGrid ul li {
     color: #B0B0B0;
     font-family: Inter;
     font-weight: 400;
     font-size: 14px;
     font-style: normal;
-    line-height: 21px;
+    line-height: 24px;
     text-align: justify;
 }
 
-/* Logo Maior / Segunda Logo */
-.secondLogo {
-    width: 1233px;
-    height: 247px;
-    top: 414px;
-    left: 89px;
-    opacity: 0.2;
+.emailInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Aquele reangulo em cima da segunda logo */
+.emailInput p {
+    text-align: justify;
+}
+
+.emailInput input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #767A85;
+    background: #4B4B4B;
+    color: white;
+    padding: 0 50px 0 20px;
+    box-sizing: border-box;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.inputWrapper input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #767A85;
+    background: #4B4B4B;
+    color: white;
+    padding: 0 50px 0 20px;
+    box-sizing: border-box;
+}
+
+.submitIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+}
+
+.secondLogo {
+    width: 100%;
+    max-width: 1233px;
+    height: auto;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+footer {
+    position: relative;
+}
+
 .rectangleBar {
-    width: 1392px;
-    height: 108px;
-    flex-shrink: 0;
+    background-color: black;
     color: #B0B0B0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px; 
-    letter-spacing: -0.14px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
 }
 
 .rectangleBar ul {
     display: flex;
+    justify-content: center;
     gap: 20px;
     align-items: center;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
 .rectangleBar ul li:nth-child(2),
 .rectangleBar ul li:nth-child(3),
 .rectangleBar ul li:nth-child(4) {
     text-decoration: underline;
     font-weight: bold;
+}
+
+.socialMedia {
+    display: inline-flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
 }
 </style>
