@@ -102,7 +102,7 @@
     display: inline-flex;
     align-items: flex-start;
     gap: 56px;
-    
+    padding: auto;
 }   
 
 .footerItemsGrid h2 {
