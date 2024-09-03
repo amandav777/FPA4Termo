@@ -74,6 +74,8 @@
 .container {
     border-radius: 30px;
     background-color: black;
+    width: 1400px;
+    height: 734px;
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
