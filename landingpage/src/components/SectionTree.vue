@@ -74,6 +74,8 @@ export default {
 <style scoped>
 /* assets de texto abaixo! :) */
 
+
+
 .subtitle1 {
   color: #000;
   font-family: Inter;
@@ -144,15 +146,15 @@ h6 {
 /* assets de alinhamento */
 
 .section3 {
-  width: 87.5rem;
-  height: 62.1875rem;
-  flex-shrink: 0;
-  border-radius: 1.875rem;
-  background: #F3F5F9;
-  justify-content: center;
-  display: flex;
+  background-color: #F3F5F9;
+  border-radius: 30px;
+  width: 1400px;
+  height: 995px;  
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
 }
-
 .textWrapper {
   display: flex;
   flex-direction: column;
