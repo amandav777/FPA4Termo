@@ -22,7 +22,7 @@ export default {
   name: 'ProductCard',
   data() {
     return {
-      products: [ 
+      products: [
         {
           id: 'blackHeadset',
           itemWeightLabel: 'Item Weight',
@@ -44,6 +44,44 @@ export default {
 </script>
 
 <style scoped>
+/* assets de texto abaixo! :) */
+
+.body2 {
+  color: var(--White-white-50, #FFF);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.01125rem;
+  margin: 0;
+}
+
+.body3 {
+  color: var(--White-white-50, #FFF);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
+  margin: 0;
+}
+
+h4 {
+  color: var(--White-white-50, #FFF);
+  font-family: Inter;
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 4.25rem;
+  letter-spacing: -0.15rem;
+  width: 24.3125rem;
+}
+
+/* fim das assets de texto */
+
+
 .productCard {
   display: flex;
   width: 36.5rem;
@@ -57,7 +95,6 @@ export default {
   transition: all 300ms ease-out;
 
 }
-
 
 #pinkHeadset:hover,
 #blackHeadset:hover {
@@ -87,42 +124,6 @@ export default {
   backdrop-filter: blur(27px);
 }
 
-/* assets de texto abaixo! :) */
-
-.body2 {
-  color: var(--White-white-50, #FFF);
-  text-align: center;
-  font-family: Inter;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.01125rem;
-  margin: 0;
-}
-
-.body3 {
-  color: var(--White-white-50, #FFF);
-  font-family: Inter;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5rem;
-  letter-spacing: -0.01rem;
-  margin: 0;
-}
-h4 {
-  color: var(--White-white-50, #FFF);
-  font-family: Inter;
-  font-size: 3.75rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 4.25rem;
-  letter-spacing: -0.15rem;
-  width: 24.3125rem;
-}
-
-/* fim das assets de texto */
-
 .weightDetails {
   display: flex;
   flex-direction: column;
@@ -142,6 +143,97 @@ h4 {
   flex-direction: row;
   gap: 2rem;
   flex-shrink: 0;
-  
 }
+
+ @media (max-width: 1280px) {
+  .cardWrapper {
+    flex-direction: column;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardWrapper {
+    flex-direction: column;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    flex-direction: column;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cardWrapper {
+    flex-direction: column;
+    background-color: aqua;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .productCard {
+    display: flex;
+    max-width: 330px;
+    height: fit-content;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20.625rem;
+    border-radius: 1.25rem;
+    transition: all 300ms ease-out;
+  }
+
+  h4 {
+    width: fit-content;
+  }
+} 
+
+
+@media (max-width: 320px) {
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cardWrapper {
+    flex-direction: column;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    padding: 20px;
+  }
+
+
+  .productCard{
+    width: fit-content;
+    padding: 20px;
+    height: fit-content;
+  }
+
+  h4 {
+    width: fit-content;
+  }
+}
+
+
+
 </style>
