@@ -5,7 +5,6 @@
     <SectionTwo />
     <SectionTree />
     <FooterSection />
-
   </div>
   </div>
 </template>
@@ -38,8 +37,10 @@ body {
 
 .container{
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 

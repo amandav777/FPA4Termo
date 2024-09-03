@@ -75,6 +75,7 @@ export default {
 /* assets de texto abaixo! :) */
 
 
+
 .subtitle1 {
   color: #000;
   font-family: Inter;
@@ -83,16 +84,6 @@ export default {
   font-weight: 600;
   line-height: 2.75rem;
   letter-spacing: -0.09rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 .body1 {
@@ -103,16 +94,6 @@ export default {
   font-weight: 400;
   line-height: 1.75rem;
   letter-spacing: -0.0125rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 .body2 {
@@ -125,16 +106,6 @@ export default {
   line-height: 1.75rem;
   letter-spacing: -0.01125rem;
   align-self: stretch;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 .body3 {
@@ -146,16 +117,6 @@ export default {
   line-height: 1.5rem;
   letter-spacing: -0.01rem;
   text-decoration: line-through;
-
-  @media (max-width: 768px) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
 }
 
 h6 {
@@ -166,14 +127,6 @@ h6 {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.1rem;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.75rem;
-  }
 }
 
 .button2 {
@@ -186,54 +139,28 @@ h6 {
   line-height: 1.5rem;
   letter-spacing: -0.0075rem;
   text-transform: uppercase;
-
-  @media (max-width: 768px) {
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.5rem;
-    line-height: 1rem;
-  }
 }
+
+/* fim das assets de texto */
 
 /* assets de alinhamento */
 
 .section3 {
-  width: 87.5rem;
-  height: 62.1875rem;
-  flex-shrink: 0;
-  border-radius: 1.875rem;
-  background: #F3F5F9;
-  justify-content: center;
-  display: flex;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-  }
-
-  @media (max-width: 768px) {
-    padding: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 1rem;
-  }
+  background-color: #F3F5F9;
+  border-radius: 30px;
+  width: 1400px;
+  height: 995px;  
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
 }
-
 .textWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 42.25rem;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
 }
 
 .container {
@@ -242,11 +169,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    gap: 3rem;
-  }
 }
 
 .cardWrapper {
@@ -255,18 +177,9 @@ h6 {
   gap: 9rem;
   align-self: stretch;
   flex-direction: row;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  @media (max-width: 728px) {
-    width: fit-content;
-    }
-
-
 }
+
+/* fim das assets de alinhamento */
 
 /* assets dos headsets */
 
@@ -274,13 +187,6 @@ h6 {
   height: 20.4375rem;
   width: auto;
   transition: opacity 0.3s ease;
-
-  @media (max-width: 768px) {
-    height: 15rem;
-  }
-
-  @media (max-width: 480px) {
-  }
 }
 
 .headsetDetails {
@@ -289,10 +195,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 }
 
 .pricing {
@@ -302,10 +204,6 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 4px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 }
 
 .btnAddToCard {
@@ -317,11 +215,6 @@ h6 {
   border-radius: 2.5rem;
   border: 1px solid var(--White-white-700, #B5B5B5);
   background: var(--White-white-50, #FFF);
-
-  @media (max-width: 768px) {
-    width: fit-content;
-    padding: 0.5rem;
-  }
 }
 
 .btnAddToCard:hover {
@@ -334,23 +227,5 @@ h6 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 }
-
-@media (max-width: 320px){
-  .container{
-    background-color: #E12237;
-    width: 320px;
-  }
-
-  .cardWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-}
-
 </style>
