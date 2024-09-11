@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
-    <div class="cardWrapper">
-      <div v-for="(product) in products" :key="product.id" class="productCard" :id="product.id">
-        <div class="productDetails">
+  <div class="container-section2">
+    <div class="card-wrapper">
+      <div v-for="(product) in products" :key="product.id" class="product-card" :id="product.id">
+        <div class="product-details">
           <!-- icon -->
           <img src="../assets/icons/boxIcon.png" alt="Box icon">
           <!-- texts -->
-          <div class="weightDetails">
-            <p class="body3">{{ product.itemWeightLabel }}</p>
-            <p class="body2">{{ product.weight }}</p>
+          <div class="weight-details">
+            <p class="body-3">{{ product.itemWeightLabel }}</p>
+            <p class="body-2">{{ product.weight }}</p>
           </div>
         </div>
         <h4>{{ product.cta }}</h4>
@@ -46,7 +46,7 @@ export default {
 <style scoped>
 /* assets de texto abaixo! :) */
 
-.body2 {
+.body-2 {
   color: var(--White-white-50, #FFF);
   text-align: center;
   font-family: Inter;
@@ -57,7 +57,7 @@ export default {
   margin: 0;
 }
 
-.body3 {
+.body-3 {
   color: var(--White-white-50, #FFF);
   font-family: Inter;
   font-size: 1rem;
@@ -82,7 +82,7 @@ h4 {
 /* fim das assets de texto */
 
 
-.productCard {
+.product-card {
   display: flex;
   width: 36.5rem;
   height: fit-content;
@@ -93,7 +93,6 @@ h4 {
   flex-shrink: 0;
   border-radius: 1.25rem;
   transition: all 300ms ease-out;
-
 }
 
 #pinkHeadset:hover,
@@ -103,7 +102,6 @@ h4 {
   background-color: black;
 }
 
-
 #blackHeadset {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../assets/images/blackHeadset.png) lightgray 50% / cover no-repeat;
 }
@@ -112,8 +110,7 @@ h4 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../assets/images/pinkHeadset.png) lightgray 50% / cover no-repeat;
 }
 
-
-.productDetails {
+.product-details {
   display: flex;
   width: 14.125rem;
   padding: 0.875rem 1rem;
@@ -124,7 +121,7 @@ h4 {
   backdrop-filter: blur(27px);
 }
 
-.weightDetails {
+.weight-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,60 +129,90 @@ h4 {
   flex: 1 0 0;
 }
 
-.container {
+.container-section2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cardWrapper {
+.card-wrapper {
   display: inline-flex;
   flex-direction: row;
   gap: 2rem;
   flex-shrink: 0;
 }
 
- @media (max-width: 1280px) {
-  .cardWrapper {
+
+
+@media (max-width: 320px) {
+  .container-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    width: 100%;
+  }
+
+  .card-wrapper {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-card {
+    max-width: 80%;
+    height: fit-content;
+  }
+
+  h4 {
+    width: fit-content;
+  }
+}
+
+
+/* 
+@media (max-width: 1280px) {
+  .card-wrapper {
     flex-direction: column;
     padding: 40px;
   }
 }
 
 @media (max-width: 1024px) {
-  .cardWrapper {
+  .card-wrapper {
     flex-direction: column;
     padding: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .cardWrapper {
+  .card-wrapper {
     flex-direction: column;
     padding: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
+  .container-section2 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
 
-  .cardWrapper {
+  .card-wrapper {
     flex-direction: column;
     background-color: aqua;
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding: 20px;
     margin: 0 auto;
   }
 
-  .productCard {
+  .product-card {
     display: flex;
     max-width: 330px;
     height: fit-content;
@@ -200,40 +227,5 @@ h4 {
   h4 {
     width: fit-content;
   }
-} 
-
-
-@media (max-width: 320px) {
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .cardWrapper {
-    flex-direction: column;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 100vw;
-    padding: 20px;
-  }
-
-
-  .productCard{
-    width: fit-content;
-    padding: 20px;
-    height: fit-content;
-  }
-
-  h4 {
-    width: fit-content;
-  }
-}
-
-
-
+} */
 </style>

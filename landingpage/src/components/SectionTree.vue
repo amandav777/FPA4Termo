@@ -1,30 +1,30 @@
 <template>
-  <div class="section3">
-    <div class="container">
-      <div class="textWrapper">
-        <p class="subtitle1">NEW PRODUCTS</p>
-        <p class="body2">Choose the headset that best suits your needs. We offer top-quality options with a variety of
+  <div class="section-3">
+    <div class="container-headsets">
+      <div class="text-wrapper">
+        <p class="subtitle-1">NEW PRODUCTS</p>
+        <p class="body-2">Choose the headset that best suits your needs. We offer top-quality options with a variety of
           features to enhance your audio experience.</p>
       </div>
 
-      <div class="cardWrapper">
-        <div v-for="product in products" :key="product.id" class="productCard" :id="product.id">
-          <div class="headsetDetails">
+      <div class="card-wrapper">
+        <div v-for="product in products" :key="product.id" class="product-card" :id="product.id">
+          <div class="headset-details">
             <!-- image -->
             <div class="img">
               <img :src="hoveredProduct === product.id ? product.hoverImage : product.originalImage"
                 @mouseover="hoveredProduct = product.id" @mouseleave="hoveredProduct = null" alt="Headset Image">
             </div>
             <!-- texts -->
-            <p class="body2">{{ product.title }}</p>
-            <section class="priceDetailer">
+            <p class="body-2">{{ product.title }}</p>
+            <section class="price-detailer">
               <div class="pricing">
-                <p class="body1">$</p>
+                <p class="body-1">$</p>
                 <h6>{{ product.discountPrice }}</h6>
-                <p class="body3">{{ product.originalPrice }}</p>
+                <p class="body-3">{{ product.originalPrice }}</p>
               </div>
-              <button class="btnAddToCard">
-                <p class="button2">ADD TO CARDT</p>
+              <button class="btn-add-to-card">
+                <p class="button-2">ADD TO CARD</p>
                 <img src="../assets/icons/shopCart.png" alt="A shopping cart icon">
               </button>
             </section>
@@ -74,9 +74,7 @@ export default {
 <style scoped>
 /* assets de texto abaixo! :) */
 
-
-
-.subtitle1 {
+.subtitle-1 {
   color: #000;
   font-family: Inter;
   font-size: 2.25rem;
@@ -86,7 +84,7 @@ export default {
   letter-spacing: -0.09rem;
 }
 
-.body1 {
+.body-1 {
   color: var(--Black-black-500, #000);
   font-family: Inter;
   font-size: 1.25rem;
@@ -96,7 +94,7 @@ export default {
   letter-spacing: -0.0125rem;
 }
 
-.body2 {
+.body-2 {
   color: var(--Black-black-400, #333);
   text-align: center;
   font-family: Inter;
@@ -108,7 +106,7 @@ export default {
   align-self: stretch;
 }
 
-.body3 {
+.body-3 {
   color: var(--Alert-Colors-red, #E12237);
   font-family: Inter;
   font-size: 1rem;
@@ -129,7 +127,7 @@ h6 {
   letter-spacing: -0.1rem;
 }
 
-.button2 {
+.button-2 {
   color: var(--Black-black-500, #000);
   font-feature-settings: 'ss02' on;
   font-family: Inter;
@@ -145,8 +143,7 @@ h6 {
 
 /* assets de alinhamento */
 
-.section3 {
-  background-color: #F3F5F9;
+.section-3 {
   border-radius: 30px;
   width: 1400px;
   height: 995px;  
@@ -156,7 +153,7 @@ h6 {
   position: relative;
 }
 
-.textWrapper {
+.text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,18 +161,22 @@ h6 {
   width: 42.25rem;
 }
 
-.container {
+.container-headsets {
+  background-color: #F3F5F9;
   display: flex;
-  width: 75rem;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
+  border-radius: 30px;
+  padding: 10px 10px 20px;
+  width: 1380px;
 }
 
-.cardWrapper {
+
+.card-wrapper {
   display: flex;
   align-items: center;
-  gap: 9rem;
+  gap: 3rem;
   align-self: stretch;
   flex-direction: row;
 }
@@ -190,9 +191,9 @@ h6 {
   transition: opacity 0.3s ease;
 }
 
-.headsetDetails {
+.headset-details {
   display: flex;
-  width: 16.8125rem;
+  width: fit-content;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
@@ -207,7 +208,7 @@ h6 {
   gap: 4px;
 }
 
-.btnAddToCard {
+.btn-add-to-card {
   display: flex;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
   justify-content: center;
@@ -218,11 +219,11 @@ h6 {
   background: var(--White-white-50, #FFF);
 }
 
-.btnAddToCard:hover {
+.btn-add-to-card:hover {
   border-color: 2px solid #000;
 }
 
-.priceDetailer {
+.price-detailer {
   display: flex;
   width: 16.8125rem;
   flex-direction: column;
@@ -230,59 +231,142 @@ h6 {
   gap: 1.5rem;
 }
 
+
 @media (max-width: 320px) {
-  .section3 {
+  .section-3 {
+    border-radius: 15px;
     width: 100%;
     height: auto;
+    margin: 0;
     padding: 10px;
-    border-radius: 15px;
+    position: relative;
   }
 
-  .container {
+  .container-headsets {
+    max-width: 100%;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Diminuído para ajustar melhor o espaço */
-    padding: 0;
+    gap: 0.5rem;
   }
 
-  .cardWrapper {
+  .card-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    width: 100%; /* Garante que as divs ocupem toda a largura */
-  }
-
-  .textWrapper {
+    gap: 5rem;
     width: 100%;
-    padding: 0 1rem; /* Ajusta o texto para telas pequenas */
-    text-align: center;
+    padding-bottom: 5px;
   }
 
   .img img {
-    width: 100%; /* Ajusta a imagem para ocupar 100% da tela */
+    max-width: 70%;
     height: auto;
   }
 
-  .headsetDetails, .priceDetailer {
-    width: 100%;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .pricing {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .body2{
-    width: 50%;
+  .img {
     display: flex;
     justify-content: center;
   }
 
+  .headset-details {
+    width: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pricing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .body-2 {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .text-wrapper {
+    max-width: 280px;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .btn-add-to-card:active {
+    border: 2px solid #000;
+  }
 }
 
+
+@media (max-width: 480px) {
+  .section-3 {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+  }
+
+  .container-headsets {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .img img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .headset-details {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pricing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .body-2 {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .text-wrapper {
+    max-width: 280px;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+}
 
 
 </style>
