@@ -127,6 +127,8 @@
 .footerItemsGrid {
     display: flex;
     gap: 56px;
+    position: relative;
+    margin-top: -40px;
 }
 
 .footerItemsGrid ul {
@@ -192,6 +194,7 @@
 .secondLogo {
     margin-top: 30px;
     bottom: 0;
+    left: 0;
     max-width: 100%;
     width: 1233px;
 }
@@ -208,9 +211,7 @@
     font-size: 14px;
     text-align: center;
     width: 100%;
-    z-index: 10;
     padding: 10px 0;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
