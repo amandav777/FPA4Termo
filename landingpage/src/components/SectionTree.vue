@@ -74,6 +74,8 @@ export default {
 <style scoped>
 /* assets de texto abaixo! :) */
 
+
+
 .subtitle1 {
   color: #000;
   font-family: Inter;
@@ -144,13 +146,14 @@ h6 {
 /* assets de alinhamento */
 
 .section3 {
-  width: 87.5rem;
-  height: 62.1875rem;
-  flex-shrink: 0;
-  border-radius: 1.875rem;
-  background: #F3F5F9;
-  justify-content: center;
-  display: flex;
+  background-color: #F3F5F9;
+  border-radius: 30px;
+  width: 1400px;
+  height: 995px;  
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
 }
 
 .textWrapper {
@@ -226,4 +229,60 @@ h6 {
   align-items: center;
   gap: 1.5rem;
 }
+
+@media (max-width: 320px) {
+  .section3 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Diminuído para ajustar melhor o espaço */
+    padding: 0;
+  }
+
+  .cardWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%; /* Garante que as divs ocupem toda a largura */
+  }
+
+  .textWrapper {
+    width: 100%;
+    padding: 0 1rem; /* Ajusta o texto para telas pequenas */
+    text-align: center;
+  }
+
+  .img img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da tela */
+    height: auto;
+  }
+
+  .headsetDetails, .priceDetailer {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pricing {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .body2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+
 </style>
