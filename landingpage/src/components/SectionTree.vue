@@ -155,6 +155,7 @@ h6 {
   padding: 20px;
   position: relative;
 }
+
 .textWrapper {
   display: flex;
   flex-direction: column;
@@ -228,4 +229,60 @@ h6 {
   align-items: center;
   gap: 1.5rem;
 }
+
+@media (max-width: 320px) {
+  .section3 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Diminuído para ajustar melhor o espaço */
+    padding: 0;
+  }
+
+  .cardWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%; /* Garante que as divs ocupem toda a largura */
+  }
+
+  .textWrapper {
+    width: 100%;
+    padding: 0 1rem; /* Ajusta o texto para telas pequenas */
+    text-align: center;
+  }
+
+  .img img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da tela */
+    height: auto;
+  }
+
+  .headsetDetails, .priceDetailer {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pricing {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .body2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+
 </style>
