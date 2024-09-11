@@ -219,22 +219,22 @@
 
 .rectangleBar ul {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between; 
     align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%; 
+    gap: 30px;
 }
+
 
 .rectangleBar ul li {
     text-align: center;
-}
+    
+}   
 
-.rectangleBar ul li a {
-    text-decoration: underline;
-    font-weight: bold;
-}
+
 
 .rectangleBar ul li:first-child {
     margin-right: auto;
@@ -244,7 +244,15 @@
     margin-left: auto;
 }
 
+.rectangleBar ul li:nth-child(2),
+.rectangleBar ul li:nth-child(3),
+.rectangleBar ul li:nth-child(4) {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .socialMedia {
+    margin-left: auto; 
     display: inline-flex;
     gap: 10px;
 }
