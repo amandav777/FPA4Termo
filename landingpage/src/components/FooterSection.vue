@@ -104,11 +104,11 @@
     font-family: 'Inter', sans-serif;
     gap: 56px;
     justify-content: space-between; 
-    align-items: flex-start;
-
+    align-items: flex-start; 
 }
 
 .menuGrid h2 {
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 20px;
 }
