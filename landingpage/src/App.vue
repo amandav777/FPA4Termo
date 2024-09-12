@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container">
+    <NavBar />  
     <HeroSection />
     <SectionTwo />
     <SectionTree />
@@ -16,10 +17,12 @@ import SectionTwo from './components/SectionTwo.vue'
 import SectionTree from './components/SectionTree.vue'
 import HeroSection from './components/HeroSection.vue'
 import FooterSection from './components/FooterSection.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
+    NavBar,
     HeroSection,
     SectionTwo,
     SectionTree,

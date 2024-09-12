@@ -1,7 +1,7 @@
 <template>
-    <div class="navbarMockada">
+    <!-- <div class="navbarMockada">
         trocar dps
-    </div>
+    </div> -->
 
     <div class="heroSection">
         <div class="heroSectionContainer">
