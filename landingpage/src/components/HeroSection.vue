@@ -1,54 +1,58 @@
 <template>
+
     <!-- <div class="navbarMockada">
+
+    <div class="navbar-mockada">
+
         trocar dps
     </div> -->
 
-    <div class="heroSection">
-        <div class="heroSectionContainer">
-            <div class="alignHorizontal" style="gap: 80px;">
-                <div class="leftContainer">
+    <div class="hero-section">
+        <div class="hero-section-container">
+            <div class="align-horizontal" style="gap: 80px;">
+                <div class="left-container">
                     <h1>GABINI HEADSET STORE</h1>
 
-                    <div class="ctaHeroSection">
-                        <p class="subtitle1">Welcome to Gabini quality, at our most welcoming price.</p>
-                        <button class="btnCta">
-                            <p class="button1">SEE MORE DETAILS</p>
+                    <div class="cta-hero-section">
+                        <p class="subtitle-1">Welcome to Gabini quality, at our most welcoming price.</p>
+                        <button class="btn-cta">
+                            <p class="button-1">SEE MORE DETAILS</p>
                             <img src="../assets/icons/arrowRight.png" alt="A right-oriented arrow">
                         </button>
                     </div>
 
-                    <div class="alignHorizontal" style="gap: 3rem;">
+                    <div class="align-horizontal" style="gap: 3rem;">
                         <div class="rating">
-                            <div class="alignHorizontal" style="gap: 0.75rem;">
-                                <p class="subtitle3">4.8</p>
+                            <div class="align-horizontal" style="gap: 0.75rem;">
+                                <p class="subtitle-3">4.8</p>
                                 <img src="../assets/icons/star.png" alt="A star icon" id="star">
                             </div>
-                            <p class="body3">2,290 ratings</p>
+                            <p class="body-3">2,290 ratings</p>
                         </div>
 
-                        <div class="alignVertical">
-                            <p class="subtitle2">10K+</p>
+                        <div class="align-vertical">
+                            <p class="subtitle-2">10K+</p>
                             <p class="caption">Bought in past month</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="rightContainer">
-                    <div class="cardHeroSection">
+                <div class="right-container">
+                    <div class="card-hero-section">
                         <img src="../assets/images/headsetHero.png"
                             alt="A card with a beautiful headset and some information about it. It says: 2 years of warranty and 78 hours of battery.">
 
-                        <div class="bubbleInfo" id="battery">
+                        <div class="bubble-info" id="battery">
                             <img src="../assets/icons/battery.png" alt="A battery that lasts 78 hours!">
-                            <section class="batteryInfo">
+                            <section class="battery-info">
                                 <p>Battery</p>
                                 <h2>78 hours</h2>
                             </section>
                         </div>
 
-                        <div class="bubbleInfo" id="warranty">
+                        <div class="bubble-info" id="warranty">
                             <img src="../assets/icons/medal.png" alt="2 years of warranty!">
-                            <section class="warrantyInfo">
+                            <section class="warranty-info">
                                 <p>Warranty</p>
                                 <h2>2 years</h2>
                             </section>
@@ -78,7 +82,7 @@ h1 {
     margin: 0;
 }
 
-.subtitle1 {
+.subtitle-1 {
     color: var(--Base-100, #1F2026);
     font-family: Inter;
     font-size: 2.25rem;
@@ -89,7 +93,7 @@ h1 {
     width: 29.0625rem;
 }
 
-.subtitle2 {
+.subtitle-2 {
     color: var(--Black-black-500, #000);
     font-family: Inter;
     font-size: 1.875rem;
@@ -109,7 +113,7 @@ h1 {
     line-height: 150%;
 }
 
-.subtitle3 {
+.subtitle-3 {
     color: var(--Black-black-500, #000);
     font-family: Inter;
     font-size: 1.5rem;
@@ -120,7 +124,7 @@ h1 {
     margin: 0;
 }
 
-.body3 {
+.body-3 {
     color: var(--Black-black-200, #8A8A8A);
     font-family: Inter;
     font-size: 1rem;
@@ -130,8 +134,7 @@ h1 {
     letter-spacing: -0.01rem;
 }
 
-
-.bubbleInfo {
+.bubble-info {
     p {
         color: var(--Black-black-200, #8A8A8A);
         text-align: center;
@@ -157,21 +160,20 @@ h1 {
     }
 }
 
-
 /* fim das assets de texto */
-.heroSection {
+.hero-section {
     width: 100vw;
     height: 51.4375rem;
     flex-shrink: 0;
 }
 
-.ctaHeroSection {
+.cta-hero-section {
     border-left: 1px solid #BFC0C2;
     width: fit-content;
     padding: 25px;
 }
 
-.btnCta {
+.btn-cta {
     display: inline-flex;
     padding: 0.5rem 0.5rem 0.5rem 1.5rem;
     justify-content: center;
@@ -183,7 +185,7 @@ h1 {
     color: var(--Black-black-500, #000);
 }
 
-.button1 {
+.button-1 {
     font-family: Inter;
     font-size: 0.875rem;
     font-style: normal;
@@ -193,24 +195,24 @@ h1 {
     text-transform: uppercase;
 }
 
-.btnCta:hover {
+.btn-cta:hover {
     border: 1.5px solid #000;
 }
 
-.navbarMockada {
+.navbar-mockada {
     width: 100vw;
     height: 5.9375rem;
     flex-shrink: 0;
     background-color: black;
 }
 
-.alignHorizontal {
+.align-horizontal {
     display: flex;
     flex-direction: row;
     width: fit-content;
 }
 
-.alignVertical {
+.align-vertical {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -224,7 +226,7 @@ h1 {
     width: fit-content;
 }
 
-.leftContainer {
+.left-container {
     width: 34rem;
     display: flex;
     flex-direction: column;
@@ -232,7 +234,7 @@ h1 {
     height: 700px;
 }
 
-.cardHeroSection {
+.card-hero-section {
     position: relative;
     width: 33.3125rem;
     height: 36.1875rem;
@@ -240,13 +242,13 @@ h1 {
     border-radius: 1.875rem;
 }
 
-.heroSectionContainer {
+.hero-section-container {
     display: flex;
     justify-content: center;
     padding: 60px;
 }
 
-.bubbleInfo {
+.bubble-info {
     position: absolute;
     display: flex;
     width: 16.25rem;
@@ -268,7 +270,7 @@ h1 {
     right: 20px;
 }
 
-.batteryInfo {
+.battery-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,7 +278,7 @@ h1 {
     gap: 0.25rem;
 }
 
-.warrantyInfo {
+.warranty-info {
     display: flex;
     flex-direction: column;
     justify-content: center;

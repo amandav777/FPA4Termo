@@ -5,8 +5,8 @@
     <HeroSection />
     <SectionTwo />
     <SectionTree />
+    <SectionFour />
     <FooterSection />
-
   </div>
   </div>
 </template>
@@ -15,6 +15,7 @@
 <script>
 import SectionTwo from './components/SectionTwo.vue'
 import SectionTree from './components/SectionTree.vue'
+import SectionFour from './components/SectionFour.vue'
 import HeroSection from './components/HeroSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import NavBar from './components/NavBar.vue'
@@ -26,6 +27,7 @@ export default {
     HeroSection,
     SectionTwo,
     SectionTree,
+    SectionFour,
     FooterSection
   }
 }
@@ -41,8 +43,10 @@ body {
 
 .container{
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 
