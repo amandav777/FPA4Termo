@@ -1,7 +1,11 @@
 <template>
+
+    <!-- <div class="navbarMockada">
+
     <div class="navbar-mockada">
+
         trocar dps
-    </div>
+    </div> -->
 
     <div class="hero-section">
         <div class="hero-section-container">
