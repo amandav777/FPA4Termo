@@ -7,7 +7,19 @@
             <a href="#">Home</a>
             <a href="#">Sale</a>
             <a href="#">Bundle & Save</a>
-            <a href="#">Shop by Category</a>
+
+            <div class="dropdown" @click="toggleDropdown">
+                <a href="#" class="dropbtn">
+                    Shop By Category
+                    <img :src="arrowImg" alt="Dropdown arrow" class="arrow" />
+                </a>
+                <div v-if="isDropdownOpen" class="dropdown-content">
+                    <a href="#">Category 1</a>
+                    <a href="#">Category 2</a>
+                    <a href="#">Category 3</a>
+                </div>
+            </div>
+
             <a href="#">Support</a>
         </div>
 
@@ -21,6 +33,20 @@
 </template>
 
 <script>
+
+export default{
+    data() {
+        return {
+            isDropdownOpen: false,
+            arrowImg: require('@/assets/icons/seta.png'),
+        };
+    },
+    methods: {
+        toggleDropdown() {
+            this.isDropdownOpen = !this.isDropdownOpen;
+        },
+    },
+};
 </script>
 
 <style scoped>
@@ -65,7 +91,6 @@
             padding: 10px;
         }
 
-        /* Sign in Button */
         .navbar .nav-actions {
         color: var(--Black-black-500, #000);
         text-align: center;
@@ -77,6 +102,7 @@
         letter-spacing: -0.14px;
         display: flex;
         text-transform: uppercase;
+        text-align: none;
         }
 
         .navbar .nav-actions a {
