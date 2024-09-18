@@ -170,6 +170,17 @@ h4 {
   }
 }
 
+@media (max-width: 1024px) {
+  .card-wrapper {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .product-card{
+    width: 23.2rem;
+  }
+
+}
 
 /* 
 @media (max-width: 1280px) {
@@ -179,12 +190,6 @@ h4 {
   }
 }
 
-@media (max-width: 1024px) {
-  .card-wrapper {
-    flex-direction: column;
-    padding: 40px;
-  }
-}
 
 @media (max-width: 768px) {
   .card-wrapper {

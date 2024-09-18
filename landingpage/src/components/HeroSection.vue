@@ -281,4 +281,13 @@ h1 {
     align-items: flex-start;
     gap: 0.25rem;
 }
+
+@media (max-width: 1024px) {
+    .hero-section{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
 </style>

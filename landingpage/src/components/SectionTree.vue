@@ -146,7 +146,7 @@ h6 {
 .section-3 {
   border-radius: 30px;
   width: 1400px;
-  height: 995px;  
+  height: 995px;
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -368,5 +368,31 @@ h6 {
 
 }
 
+@media (max-width: 1024px) {
 
+
+  .section-3{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-headsets {
+    width: 800px;
+    padding: 40px;
+    height: fit-content;
+  }
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: fit-content;
+  }
+
+  .headset-details {
+    width: fit-content;
+  }
+
+
+
+}
 </style>
