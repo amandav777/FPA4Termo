@@ -5,47 +5,47 @@
                 <img src="../assets/images/logo_gabini.png" alt="Footer Logo">
             </div>
             <div class="menuGrid">
-                <section class="footerItemsGrid">
-                <div class="menuColumn">
-                    <h2>Menu</h2>
-                    <ul>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Product</li>
-                        <li>Pricing</li>
-                    </ul>
-                </div>
-                <div class="resourcesColumn">
-                    <h2>Resources</h2>
-                    <ul>
-                        <li>Forum</li>
-                        <li>Support</li>
-                        <li>Partners</li>
-                        <li>Events</li>
-                    </ul>
-                </div>
-                <div class="myAcountColumn">
-                    <h2>My Acount</h2>
-                    <ul>
-                        <li>My Orders</li>
-                        <li>Faq</li>
-                        <li>Sales conditions</li>
-                        <li>Contact</li>
-                        <li>Legal Mentions</li>
-                    </ul>
-                </div>
-     
-                </section>
-                <aside class="emailInput">
-                    <h2>Subscribe to newsletter</h2>
-                    <p>Sign up for exclusive offers, original
-                        <br> stories, events and more
-                    </p>
-                    <div class="inputWrapper">
-                        <input type="email" placeholder="Email Address">
-                        <img src="..\assets\icons\enterButton.png" alt="Submit Button" class="submitIcon" required>
+                <div class="left-side">
+                    <div class="menuColumn">
+                        <h2>Menu</h2>
+                        <ul>
+                            <li>Home</li>
+                            <li>About us</li>
+                            <li>Product</li>
+                            <li>Pricing</li>
+                        </ul>
                     </div>
-                </aside>
+                    <div class="resourcesColumn">
+                        <h2>Resources</h2>
+                        <ul>
+                            <li>Forum</li>
+                            <li>Support</li>
+                            <li>Partners</li>
+                            <li>Events</li>
+                        </ul>
+                    </div>
+                    <div class="myAcountColumn">
+                        <h2>My Acount</h2>
+                        <ul>
+                            <li>My Orders</li>
+                            <li>Faq</li>
+                            <li>Sales conditions</li>
+                            <li>Contact</li>
+                            <li>Legal Mentions</li>
+                        </ul>
+                    </div>     
+                </div>
+                <div class="right-side">
+                    <aside class="emailInput">
+                        <h2>Subscribe to newsletter</h2>
+                        <p>Sign up for exclusive offers, original<br>stories, events and more</p>
+                        <div class="inputWrapper">
+                            <input type="email" placeholder="Email Address">
+                            <img src="..\assets\icons\enterButton.png" alt="Submit Button" class="submitIcon" required>
+                        </div>
+                    </aside>
+                </div>
+
             </div>
            
             <section class="footer">
@@ -94,62 +94,57 @@
     position: relative;
     width: 204px;
     height: 39px;
-    top: -50px;;
+    top: -30px;;
 }
-
 /* Grid de menus */
 .menuGrid {
-    display: flex;  
+    display: flex;
     color: white;
     font-family: 'Inter', sans-serif;
-    gap: 56px;
     justify-content: space-between; 
-    align-items: flex-start; 
+    margin-left: 10px;
 }
 
-.menuGrid h2 {
+.left-side {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 56px;
+}
+
+.left-side h2 {
     margin-bottom: 24px;
     font-weight: 700;
     font-size: 20px;
+    align-items: flex-start;
 }
 
-.menuGrid p {
+.left-side ul {
+    padding: 0;
+    margin: 0;
+}
+.left-side ul li  {
+    list-style-type: none;
     color: #B0B0B0;
     font-size: 14px;
+    margin-bottom: 12px;
+    
 }
 
 .menuColumn, .resourcesColumn, .myAcountColumn {
     flex: 1; 
     min-width: 150px; 
-}
-
-/* Estilo dos itens dos menus */
-.footerItemsGrid {
-    display: flex;
-    gap: 56px;
-    position: relative;
-    margin-top: -40px;
-}
-
-.footerItemsGrid ul {
-    padding: 0;
-    margin: 0;
-}
-
-.footerItemsGrid ul li {
-    list-style-type: none;
-    color: #B0B0B0;
-    font-size: 14px;
-    line-height: 24px;
-    text-transform: capitalize;
-    margin-bottom: 12px;
-}
-
-.footerItemsGrid ul li:last-child {
-    margin-bottom: 0;
+    margin-right: 40px
 }
 
 /* Input do newsletter */
+
+.right-side p {
+    color: #878787;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: justify;
+}
 .emailInput {
     display: inline-flex;
     flex-direction: column;

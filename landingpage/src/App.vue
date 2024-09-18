@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="container">
-    <HeroSection />
-    <SectionTwo />
-    <SectionTree />
-    <FooterSection />
+      <HeroSection />
+      <SectionTwo />
+      <SectionTree />
+      <FooterSection />
 
   </div>
   </div>
