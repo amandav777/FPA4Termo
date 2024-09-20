@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="container">
-    <NavBar />  
-    <HeroSection />
-    <SectionTwo />
-    <SectionTree />
-    <SectionFour />
-    <FooterSection />
-  </div>
+      <NavBar />  
+      <HeroSection />
+      <SectionTwo />
+      <SectionTree />
+      <SectionFour />
+      <FooterSection />
+   </div>
   </div>
 </template>
 
