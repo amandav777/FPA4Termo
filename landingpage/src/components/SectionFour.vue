@@ -76,7 +76,7 @@ function startCountdown(duration) {
 }
 
 window.onload = function() {
-  const durationInSeconds = 12 * 3600 + 25 * 60 + 45; // Tempo inicial
+  const durationInSeconds = 12 * 3600 + 25 * 60 + 45;
   startCountdown(durationInSeconds);
 };
 
@@ -100,6 +100,7 @@ body {
   position: relative;
   width: 1400px;
   height: 645px;
+  margin: 0 auto;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -270,121 +271,55 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1024px) {
   .promo-container {
-    width: 80%;
-    height: auto;
-    padding: 40px;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 
   .promo-content {
     max-width: 90%;
-    align-items: left;
-    padding-left: 50px;
-    text-align: left;
-    gap: 15px;
+    margin-bottom: 20px;
   }
 
-  .promo-text h1 {
-    font-size: 60px;
-    line-height: 60px;
-    margin-left: 0;
-    margin-top: 30px;
-    text-align: left;
-  }
-
-  .promo-text p {
-    font-size: 1.2em;
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .timer {
-    gap: 40px;
-    margin-left: 0;
-  }
-
-  .time-section span {
-    font-size: 80px;
-  }
-
-  .shop-now {
-    margin-left: 0;
-    width: 150px;
-    height: 50px;
-    font-size: 12px;
-    text-align: left;
-  }
-
-  .details {
-    margin-left: 0;
-    font-size: 0.9em;
+  .promo-image {
+    justify-content: center;
   }
 
   .promo-image img {
-    width: 350px;
-    height: auto;
+    width: 250px;
   }
 
   .background-svg {
-    width: 500px;
+    width: 350px; 
     height: auto;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .promo-container {
-    padding: 30px;
-  }
-
-  .promo-text h1 {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
-  .timer {
-    gap: 30px;
-  }
-
-  .time-section span {
-    font-size: 70px;
-  }
-
-  .promo-image img {
-    width: 280px;
-  }
-
-  .background-svg {
-    width: 400px;
   }
 
   .shop-now {
-    width: 130px;
-    height: 45px;
-    font-size: 11px;
+    width: 120px;
+    height: 42px;
+    font-size: 10px;
   }
 
   .details {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 768px) {
   .promo-container {
+    width: 100%;
     padding: 20px;
-    height: auto;
+  }
+
+  .promo-content {
+    max-width: 100%;
   }
 
   .promo-text h1 {
     font-size: 36px;
-    line-height: 36px;
-  }
-
-  .promo-text p {
-    font-size: 1em;
+    line-height: 40px;
   }
 
   .timer {
@@ -400,7 +335,7 @@ body {
   }
 
   .background-svg {
-    width: 300px;
+    width: 300px; 
   }
 
   .shop-now {
@@ -421,20 +356,15 @@ body {
   }
 
   .promo-text h1 {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 32px;
   }
 
   .promo-text p {
     font-size: 1em;
   }
 
-  .timer {
-    gap: 20px;
-  }
-
   .time-section span {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .promo-image img {
@@ -442,19 +372,15 @@ body {
   }
 
   .background-svg {
-    width: 300px;
+    width: 300px; 
   }
 
   .shop-now {
-    width: 110px;
-    height: 40px;
-    font-size: 10px;
+    width: 100px;
   }
 
   .details {
     font-size: 0.75em;
   }
 }
-
-
 </style>
