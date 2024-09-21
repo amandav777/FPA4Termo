@@ -98,7 +98,7 @@ body {
 
 .promo-container {
   position: relative;
-  width: 1400px;
+  width: 1320px;
   height: 645px;
   margin: 0 auto;
   flex-shrink: 0;
