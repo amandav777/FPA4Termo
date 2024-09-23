@@ -6,7 +6,8 @@
       <SectionTwo />
       <SectionTree />
       <SectionFour />
-      <FooterSection />
+      <SectionSix />
+    <FooterSection />
    </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ import SectionFour from './components/SectionFour.vue'
 import HeroSection from './components/HeroSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import NavBar from './components/NavBar.vue'
+import SectionSix from './components/SectionSix.vue'
 
 export default {
   name: 'App',
@@ -28,6 +30,7 @@ export default {
     SectionTwo,
     SectionTree,
     SectionFour,
+    SectionSix,
     FooterSection
   }
 }
