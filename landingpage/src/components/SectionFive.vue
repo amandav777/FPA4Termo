@@ -17,18 +17,30 @@
                 <p>18,921 (reviews)</p>
             </div>
             <div class="color-info">
-                <p>Color options</p>
-                <img src="../assets/icons/color2elipse.png" alt=""><img src="../assets/icons/color1elipse.png" alt="">
+                <p>Color Options</p>
+                <img src="../assets/icons/color1elipse.png" alt="Color option 1" class="color-circle">
+                <img src="../assets/icons/color2elipse.png" alt="Color option 2" class="color-circle">
             </div>
             <div class="product-price">
-                <p></p>
+                <div class="price-main">
+                    <span class="price-symbol">$</span>
+                    <span class="price-amount">28</span>
+                </div>
+                <div class="price-info">
+                    <span class="price-original">$35.99</span>
+                    <span class="discount-tag">22% off</span>
+                </div>
             </div>
+            
         </aside>
     </div>
  </div>
 </template>
 <style scoped>
-
+    :root {
+        --Info-100: #17F;
+        --Base-100: #1F2026;
+    }
     .container {
         width: 1400px;
         height: 928px;
@@ -39,6 +51,7 @@
         display: inline-flex;
         align-items: center;
         gap: 80px;
+        object-fit: cover;
     }
 
     .product-img{
@@ -72,6 +85,10 @@
         line-height: 24px;
         letter-spacing: -0.16px;
     }
+    .color-circle {
+        border-radius: 50%;
+        background-color: #E2E2E2;
+    }
     .color-info {
         display: flex;
         align-items: center;
@@ -94,7 +111,44 @@
     .product-price {
         display: flex;
         flex-direction: column;
+        margin-top: 15px;
+    }
+    
+    
+    .price-main {
+        display: flex;
+        align-items: center;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    
+    .price-symbol {
+        font-size: 24px;
+        font-weight: 400;
+        margin-right: 5px;
+    }
+    .price-amount {
+        font-size: 90px;
+    }
+    .price-info {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
         gap: 7px;
     }
+    .price-original {
+        font-size: 18px;
+        text-decoration: line-through;
+    }
+    
+    .discount-tag {
+        display: flex;
+        padding: 6px 14px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 40px;
+        border: 1px solid linear-gradient(to right, #CD43FF, #FD65A6,#FC9651,#FFBD72, #CD43FF);
+    }
+    
 </style>
