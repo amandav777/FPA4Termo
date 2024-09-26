@@ -4,6 +4,7 @@
     <HeroSection />
     <SectionTwo />
     <SectionTree />
+    <SectionFive />
     <FooterSection />
 
   </div>
@@ -16,6 +17,7 @@ import SectionTwo from './components/SectionTwo.vue'
 import SectionTree from './components/SectionTree.vue'
 import HeroSection from './components/HeroSection.vue'
 import FooterSection from './components/FooterSection.vue'
+import SectionFive from './components/SectionFive.vue';
 
 export default {
   name: 'App',
@@ -23,7 +25,8 @@ export default {
     HeroSection,
     SectionTwo,
     SectionTree,
-    FooterSection
+    FooterSection,
+    SectionFive
   }
 }
 </script>
