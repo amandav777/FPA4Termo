@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="container">
-    <HeroSection />
-    <SectionTwo />
-    <SectionTree />
-    <SectionFive />
+      <NavBar />  
+      <HeroSection />
+      <SectionTwo />
+      <SectionTree />
+      <SectionFour />
+      <SectionSix />
     <FooterSection />
-
-  </div>
+   </div>
   </div>
 </template>
 
@@ -15,18 +16,22 @@
 <script>
 import SectionTwo from './components/SectionTwo.vue'
 import SectionTree from './components/SectionTree.vue'
+import SectionFour from './components/SectionFour.vue'
 import HeroSection from './components/HeroSection.vue'
 import FooterSection from './components/FooterSection.vue'
-import SectionFive from './components/SectionFive.vue';
+import NavBar from './components/NavBar.vue'
+import SectionSix from './components/SectionSix.vue'
 
 export default {
   name: 'App',
   components: {
+    NavBar,
     HeroSection,
     SectionTwo,
     SectionTree,
-    FooterSection,
-    SectionFive
+    SectionFour,
+    SectionSix,
+    FooterSection
   }
 }
 </script>
@@ -41,8 +46,10 @@ body {
 
 .container{
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 

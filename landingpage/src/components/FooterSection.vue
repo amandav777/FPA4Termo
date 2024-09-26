@@ -5,47 +5,47 @@
                 <img src="../assets/images/logo_gabini.png" alt="Footer Logo">
             </div>
             <div class="menuGrid">
-                <section class="footerItemsGrid">
-                <div class="menuColumn">
-                    <h2>Menu</h2>
-                    <ul>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Product</li>
-                        <li>Pricing</li>
-                    </ul>
-                </div>
-                <div class="resourcesColumn">
-                    <h2>Resources</h2>
-                    <ul>
-                        <li>Forum</li>
-                        <li>Support</li>
-                        <li>Partners</li>
-                        <li>Events</li>
-                    </ul>
-                </div>
-                <div class="myAcountColumn">
-                    <h2>My Acount</h2>
-                    <ul>
-                        <li>My Orders</li>
-                        <li>Faq</li>
-                        <li>Sales conditions</li>
-                        <li>Contact</li>
-                        <li>Legal Mentions</li>
-                    </ul>
-                </div>
-     
-            </section>
-            <aside class="emailInput">
-                    <h2>Subscribe to newsletter</h2>
-                    <p>Sign up for exclusive offers, original
-                        <br> stories, events and more
-                    </p>
-                    <div class="inputWrapper">
-                        <input type="email" placeholder="Email Address">
-                        <img src="..\assets\icons\enterButton.png" alt="Submit Button" class="submitIcon">
+                <div class="left-side">
+                    <div class="menuColumn">
+                        <h2>Menu</h2>
+                        <ul>
+                            <li>Home</li>
+                            <li>About us</li>
+                            <li>Product</li>
+                            <li>Pricing</li>
+                        </ul>
                     </div>
-                </aside>
+                    <div class="resourcesColumn">
+                        <h2>Resources</h2>
+                        <ul>
+                            <li>Forum</li>
+                            <li>Support</li>
+                            <li>Partners</li>
+                            <li>Events</li>
+                        </ul>
+                    </div>
+                    <div class="myAcountColumn">
+                        <h2>My Acount</h2>
+                        <ul>
+                            <li>My Orders</li>
+                            <li>Faq</li>
+                            <li>Sales conditions</li>
+                            <li>Contact</li>
+                            <li>Legal Mentions</li>
+                        </ul>
+                    </div>     
+                </div>
+                <div class="right-side">
+                    <aside class="emailInput">
+                        <h2>Subscribe to newsletter</h2>
+                        <p>Sign up for exclusive offers, original<br>stories, events and more</p>
+                        <div class="inputWrapper">
+                            <input type="email" placeholder="Email Address">
+                            <img src="..\assets\icons\enterButton.png" alt="Submit Button" class="submitIcon" required>
+                        </div>
+                    </aside>
+                </div>
+
             </div>
            
             <section class="footer">
@@ -71,14 +71,16 @@
 <script></script>
 
 <style scoped>
+
+/* Estilos principais do container */
 .container {
     border-radius: 30px;
     background-color: black;
-    width: 1400px;
-    height: 734px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 734px;
+    height: auto;
     margin: 0 auto;
-    padding: 20px;
     position: relative;
 }
 
@@ -86,89 +88,74 @@
     padding: 50px;
 }
 
+/* Logo principal */
 .mainTitle {
     padding: 10px;
     position: relative;
     width: 204px;
     height: 39px;
-    margin-bottom: 20px;
+    top: -30px;;
 }
+/* Grid de menus */
 .menuGrid {
-    display: inline-flex;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 56px;  
+    color: white;
+    font-family: 'Inter', sans-serif;
+    justify-content: space-between; 
+    margin-left: 10px;
 }
-.footerItemsGrid {
+
+.left-side {
     display: inline-flex;
     align-items: flex-start;
     gap: 56px;
-    padding: auto;
-}   
-
-.footerItemsGrid h2 {
-    line-height: 24px;
-    color: white;
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
 }
 
-.footerItemsGrid p {
-    color: #B0B0B0;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 21px;
-    text-align: justify;
+.left-side h2 {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    align-items: flex-start;
+}
+
+.left-side ul {
+    padding: 0;
     margin: 0;
-    gap: 24px;
+}
+.left-side ul li  {
+    list-style-type: none;
+    color: #B0B0B0;
+    font-size: 14px;
+    margin-bottom: 12px;
     
 }
 
-.footerItemsGrid ul {
-    list-style-type: none;
-    padding: 0;
+.menuColumn, .resourcesColumn, .myAcountColumn {
+    flex: 1; 
+    min-width: 150px; 
+    margin-right: 40px
 }
 
-.footerItemsGrid ul li {
-    color: #B0B0B0;
-    font-family: Inter;
-    font-weight: 400;
+/* Input do newsletter */
+
+.right-side p {
+    color: #878787;
     font-size: 14px;
-    font-style: normal;
-    line-height: 24px;
+    font-weight: 400;
+    line-height: 150%;
     text-align: justify;
 }
-
 .emailInput {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    /* gap: 32px; */
-}
-
-.emailInput h2 {
-    color: white;
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.emailInput p {
-    color: #B0B0B0;
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 20px;
+    gap: 12px;
 }
 
 .inputWrapper {
     position: relative;
-    width: 100%;
+    max-width: 100%; 
+    width: 399px;
 }
 
 .emailInput input[type="email"] {
@@ -178,15 +165,14 @@
     border: none;
     background: #4B4B4B;
     color: white;
-    padding: 0 50px 0 20px;
+    padding: 0 60px 0 30px;
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
 
 .emailInput input[type="email"]::placeholder {
     color: #E0E0E0;
-    opacity: 1;
 }
 
 .submitIcon {
@@ -194,53 +180,64 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
+/* Segunda logo no footer */
 .secondLogo {
-    width: 100%;
-    max-width: 1233px;
-    height: auto;
-    z-index: 1;
-    margin: 0 auto;
+    margin-top: 30px;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    width: 1233px;
 }
 
 .footer {
     position: relative;
 }
 
+/* Barra inferior do footer */
 .rectangleBar {
     background-color: black;
     color: #B0B0B0;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     text-align: center;
     width: 100%;
-    z-index: 2;
     padding: 10px 0;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .rectangleBar ul {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between; 
     align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%; 
+    gap: 30px;
 }
+
 
 .rectangleBar ul li {
     text-align: center;
-    margin-left: 20px;
+    
+}   
+
+
+
+.rectangleBar ul li:first-child {
+    margin-right: auto;
+}
+
+.rectangleBar ul li:last-child {
+    margin-left: auto;
 }
 
 .rectangleBar ul li:nth-child(2),
@@ -248,26 +245,31 @@
 .rectangleBar ul li:nth-child(4) {
     text-decoration: underline;
     font-weight: bold;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.rectangleBar ul li:first-child {
-    margin-right: auto;
-    margin-left: 0;
-}
-
-.rectangleBar ul li:last-child {
-    margin-left: auto;
-    margin-right: 0;
 }
 
 .socialMedia {
+    margin-left: auto; 
     display: inline-flex;
-    padding: 10px;
-    flex-direction: column;
-    align-items: end;
     gap: 10px;
 }
+
+
+@media (max-width: 768px) {
+    .menuGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerItemsGrid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rectangleBar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 
 </style>
