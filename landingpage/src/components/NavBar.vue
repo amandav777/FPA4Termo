@@ -34,16 +34,20 @@
 
 <script>
 
-export default{
+export default {
     data() {
         return {
             isDropdownOpen: false,
             arrowImg: require('@/assets/icons/seta.png'),
+            arrowUp: require('@/assets/icons/seta.png'), 
         };
     },
     methods: {
         toggleDropdown() {
             this.isDropdownOpen = !this.isDropdownOpen;
+            this.arrowImg = this.isDropdownOpen 
+                ? this.arrowUp 
+                : require('@/assets/icons/seta.png'); 
         },
     },
 };
@@ -64,6 +68,49 @@ export default{
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+            position: relative;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+     }
+
+        img.arrow {
+        width: 13px !important; 
+        height: 13px !important;
+        margin-left:  2px !important; 
+    }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+           padding: 12px 16px;
+           background-color: #f9f9f9;
+           box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+           z-index: 1;
+           min-width: 160px;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        }
+
+        .dropdown .dropdown-content {
+        display: block;
+        }
         /* Logo */
         .navbar img {
         width: 135px;
