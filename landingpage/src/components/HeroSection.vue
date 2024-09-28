@@ -8,10 +8,10 @@
     </div> -->
     <div class="hero-section">
         <div class="angled-banner">
-            <img src="../assets/icons/Range.png" class="angled-image">
+            <img src="../assets/icons/RangeDir.png" class="angled-image">
         </div>
         <div class="angled-banner second-banner">
-            <img src="../assets/icons/Range.png" class="angled-image second-image">
+            <img src="../assets/icons/RangeEsq.png" class="angled-image second-image">
         </div>
         <div class="hero-section-container">
             <div class="align-horizontal" style="gap: 80px;">
@@ -77,21 +77,17 @@
 
 .angled-banner {
     position: absolute;
-    top: 150px;
-    left: 1200px;
-    width: 1728px;
-    height: 46px;
+    top: 0px;
     z-index: -1;
+    left:1200px;
+    top:90px;
 }
 
 .second-banner {
     position: absolute;
-    top: 1100px; 
-    left: 500px;
-    width: 3000px;
     height: 46px;
     z-index: -2;
-    transform: rotate(70deg); 
+    top: 20px;
 }
 
 .angled-image {
