@@ -6,8 +6,13 @@
 
         trocar dps
     </div> -->
-
     <div class="hero-section">
+        <div class="angled-banner">
+            <img src="../assets/icons/Range.png" class="angled-image">
+        </div>
+        <div class="angled-banner second-banner">
+            <img src="../assets/icons/Range.png" class="angled-image second-image">
+        </div>
         <div class="hero-section-container">
             <div class="align-horizontal" style="gap: 80px;">
                 <div class="left-container">
@@ -64,11 +69,35 @@
     </div>
 </template>
 
+
 <script>
 </script>
 
 <style scoped>
-/* assets de texto abaixo! :) */
+
+.angled-banner {
+    position: absolute;
+    top: 150px;
+    left: 1200px;
+    width: 1728px;
+    height: 46px;
+    z-index: -1;
+}
+
+.second-banner {
+    position: absolute;
+    top: 1100px; 
+    left: 500px;
+    width: 3000px;
+    height: 46px;
+    z-index: -2;
+    transform: rotate(70deg); 
+}
+
+.angled-image {
+    width: 1000px; 
+}
+
 h1 {
     color: var(--Black-black-500, #000);
     font-family: Inter;
