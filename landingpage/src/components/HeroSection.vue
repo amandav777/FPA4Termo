@@ -8,10 +8,10 @@
     </div> -->
     <div class="hero-section">
         <div class="angled-banner">
-            <img src="../assets/icons/RangeDir.png" class="angled-image">
+            <div class="banner-text">your text here</div>
         </div>
         <div class="angled-banner second-banner">
-            <img src="../assets/icons/RangeEsq.png" class="angled-image second-image">
+            <div class="banner-text">your text here</div>
         </div>
         <div class="hero-section-container">
             <div class="align-horizontal" style="gap: 80px;">
@@ -69,29 +69,45 @@
     </div>
 </template>
 
-
 <script>
 </script>
 
 <style scoped>
+.angled-banner, .second-banner {
+    position: absolute;
+    z-index: -1; 
+    left: 500px; 
+    top: 150px; 
+    background-color: black; 
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
 .angled-banner {
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-    left:1200px;
-    top:90px;
+    top:400px;
+    transform: rotate(30deg); 
+    width: 2000px; 
 }
 
 .second-banner {
-    position: absolute;
-    height: 46px;
+    transform: rotate(-30deg); 
     z-index: -2;
-    top: 20px;
+    width: 1500px; 
+    left:1300px;
+    top:300px;
 }
 
-.angled-image {
-    width: 1000px; 
+.banner-text {
+    color: white; 
+    font-size: 12px; 
+    font-family: 'Inter', sans-serif; 
+    text-transform: uppercase; 
+    white-space: nowrap;
+    background-size: 150px 46px;
+    background-position: 0 0;
 }
 
 h1 {
