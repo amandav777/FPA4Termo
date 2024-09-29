@@ -24,14 +24,14 @@
             class="color-2-button" 
             :class="{ selected: selectedColor === 'color2' }" 
             @click="changeColor('color2')">
-            <img src="../assets/icons/color2elipse.png" alt="Color option 2" class="color-circle">
+            <img src="../assets/icons/color1elipse.png" alt="Color option 2" class="color-circle">
             <img v-if="selectedColor === 'color2'" class="check-icon" src="../assets/icons/checkmark.png" alt="Selected">
           </button>
           <button 
             class="color-1-button" 
             :class="{ selected: selectedColor === 'color1' }" 
             @click="changeColor('color1')">
-            <img src="../assets/icons/color1elipse.png" alt="Color option 1" class="color-circle">
+            <img src="../assets/icons/color2elipse.png" alt="Color option 1" class="color-circle">
             <img v-if="selectedColor === 'color1'" class="check-icon" src="../assets/icons/checkmark.png" alt="Selected">
           </button>
         </div>
