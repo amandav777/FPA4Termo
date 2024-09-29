@@ -95,16 +95,15 @@ export default {
 
 /* Container principal */
 .container {
-  max-width: 1400px;
+  max-width: 87.5rem; 
   width: 100%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 1.875rem; 
   background: #F3F5F9;
-  padding: 20px;
+  padding: 1.25rem; 
   display: flex; 
   justify-content: center; 
   align-items: center; 
-
 }
 
 
@@ -114,8 +113,12 @@ export default {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  height: auto;
   width: 100%;
   max-width: 1000px; 
+  min-height: 646px; 
+  padding-top: 141px; 
+  padding-bottom: 141px; 
 }
 
 
@@ -133,6 +136,11 @@ export default {
 
 .product-info h2 {
   text-align: justify;
+  color: #000;
+  font-family: Inter;
+  font-size: 3rem; 
+  font-weight: 600;
+  text-align: left; ;
 }
 
 /* Imagem do produto */
@@ -199,7 +207,6 @@ export default {
 /* Opções de cores */
 .color-circle {
   border-radius: 50%;
-  background-color: #E2E2E2;
 }
 .color-info {
   display: flex;
@@ -220,6 +227,9 @@ export default {
   line-height: 28px;
   letter-spacing: -0.2px;
 }
+.color-info button {
+  background-color: #F3F5F9;
+}
 .check-icon {
   position: absolute;
   top: 50%;
@@ -237,9 +247,13 @@ export default {
 
 /* Preço do produto */
 .product-price {
+  
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   margin-top: 15px;
+  gap: 0.625rem;
+  position: relative;
 }
 .price-main {
   display: flex;
@@ -249,8 +263,11 @@ export default {
 }
 .price-symbol {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   margin-right: 5px;
+  align-self: start;
+  top: 0;
+  left: 0;
 }
 .price-amount {
   font-size: 90px;
@@ -262,8 +279,9 @@ export default {
   gap: 7px;
 }
 .price-original {
-  font-size: 18px;
+  font-size: 1.5rem;
   text-decoration: line-through;
+  font-weight: 700;
 }
 
 .discount-tag {
@@ -271,7 +289,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 40px;
   border: 2px solid transparent;
   background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #CD43FF, #FD65A6, #FC9651, #FFBD72, #CD43FF);
@@ -279,21 +296,23 @@ export default {
   background-clip: content-box, border-box;
 }
 .discount-tag label {
+  gap: 15px;
   padding: 8px 24px; 
-  font-size: 20px; 
-  font-weight: 400;
+  font-size: 1.25rem; 
+  font-weight: 700;
 }
 
 /* Botão de mais detalhes */
 .moredetails-button button {
   display: flex;
-  padding: 8px 8px 8px 24px;
-  justify-content: center;
+  padding: 12px 24px; 
+  justify-content: space-between; 
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   border-radius: 40px;
-  border: 1px solid var(--White-white-700, #B5B5B5);
-  background: var(--White-white-50, #FFF);
+  border: 1px solid #B5B5B5;
+  background-color: #FFF;
+  cursor: pointer;
 }
 .moredetails-button label {
   color: var(--Black-black-500, #000);
@@ -303,4 +322,12 @@ export default {
   letter-spacing: -0.14px;
   text-transform: uppercase;
 }
+/* Responsavidade */
+@media (max-width: 768px) {
+  .product-main {
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+  }
+}
+
 </style>
