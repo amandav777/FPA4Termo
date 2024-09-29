@@ -57,17 +57,20 @@
 </template>
 
 <script>
+
+
 export default {
   data() {
-    return {
-      selectedColor: 'color2',  // Cor inicial
-      images: {
-        color1: require('../assets/images/product1.png'),
-        color2: require('../assets/images/product2.png')
-      },
-      animationDirection: 'swap-down' // Define a animação inicial
-    };
-  },
+  return {
+    selectedColor: 'color1', // Cor inicial
+    currentImage: require('../assets/images/product.png'), // Imagem inicial
+    images: {
+      color1: require('../assets/images/product.png'),
+      color2: require('../assets/images/product2.png')
+    },
+    animationDirection: 'swap-down' // Define a animação inicial
+  };
+},
   methods: {
     changeColor(color) {
       if (this.selectedColor !== color) {
@@ -84,13 +87,13 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 :root {
   --Info-100: #17F;
   --Base-100: #1F2026;
 }
 
+/* Container principal */
 .container {
   width: 1400px;
   height: 928px;
@@ -98,6 +101,7 @@ export default {
   background: #F3F5F9;
 }
 
+/* Estrutura do produto */
 .product-main {
   display: inline-flex;
   align-items: center;
@@ -105,12 +109,12 @@ export default {
   gap: 80px;
 }
 
+/* Informações do produto */
 .product-info {
   width: 450px;
   color: #000;
   font-family: Inter;
   font-size: 48px;
-  font-style: normal;
   font-weight: 600;
   line-height: 56px;
   letter-spacing: -0.96px;
@@ -118,58 +122,56 @@ export default {
 .product-info h2 {
   text-align: justify;
 }
-.product-img {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
 
+/* Imagem do produto */
+.product-img {
+  width: 601px;
+  height: 646px;
+  padding: 0 153px 0 0;
+  overflow: hidden; /* Evita que a imagem saia do contêiner */
+  position: relative;
+}
+.product-image {
+  position: absolute;
+  max-width: 100%; 
+  max-height: 100%;
+}
 .image-container {
   position: relative;
   height: 100%;
+  width: 100%;
+  z-index: 5; 
 }
 
-.product-image {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.6s ;
-}
-/* Animação de subida (para Cor 1) */
+/* Animações */
 .swap-up-enter-active, .swap-up-leave-active {
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
-
 .swap-up-enter-from {
-  transform: translateY(100%); /* A nova imagem entra de baixo */
+  transform: translateY(100%);
 }
-
 .swap-up-enter-to {
-  transform: translateY(0); /* A nova imagem fica no centro */
+  transform: translateY(0);
 }
-
 .swap-up-leave-to {
-  transform: translateY(-100%); /* A imagem atual sobe para fora da tela */
+  transform: translateY(-100%);
 }
 
-/* Animação de descida (para Cor 2) */
 .swap-down-enter-active, .swap-down-leave-active {
   transition: transform 0.6s ease-in-out;
 }
-
 .swap-down-enter-from {
-  transform: translateY(-100%); /* A nova imagem entra de cima */
+  transform: translateY(-100%);
 }
-
 .swap-down-enter-to {
-  transform: translateY(0); /* A nova imagem fica no centro */
+  transform: translateY(0);
+}
+.swap-down-leave-to {
+  transform: translateY(100%);
 }
 
-.swap-down-leave-to {
-  transform: translateY(100%); /* A imagem atual desce para fora da tela */
-}
-.product-rating
-{
+/* Avaliação do produto */
+.product-rating {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -178,40 +180,35 @@ export default {
   color: var(--Info-100, #17F);
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.16px;
 }
 
+/* Opções de cores */
 .color-circle {
   border-radius: 50%;
   background-color: #E2E2E2;
 }
-
 .color-info {
   display: flex;
   align-items: center;
   gap: 24px;
   position: relative;
 }
-
 .color-info img {
   display: flex;
   align-items: flex-start;
   gap: 30px;
 }
-
 .color-info p {
   color: var(--Base-100, #1F2026);
   font-family: Inter;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.2px;
 }
-
 .check-icon {
   position: absolute;
   top: 50%;
@@ -221,77 +218,68 @@ export default {
   height: 20px;
   background-color: transparent;
 }
-
-.color-1-button,.color-2-button {
+.color-1-button, .color-2-button {
   position: relative;
   border: none;
   padding: 0;
 }
 
+/* Preço do produto */
 .product-price {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
 }
-
 .price-main {
   display: flex;
   align-items: center;
   font-size: 60px;
   font-weight: 700;
 }
-
 .price-symbol {
   font-size: 24px;
   font-weight: 400;
   margin-right: 5px;
 }
-
 .price-amount {
   font-size: 90px;
 }
-
 .price-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 7px;
 }
-
 .price-original {
   font-size: 18px;
   text-decoration: line-through;
 }
-
 .discount-tag {
   display: flex;
   padding: 6px 14px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  position: relative;
   border-radius: 40px !important;
   border-image: linear-gradient(to right, #CD43FF, #FD65A6, #FC9651, #FFBD72, #CD43FF) 1 round;
   border-width: 2px;
   border-style: solid;
 }
 
+/* Botão de mais detalhes */
 .moredetails-button button {
   display: flex;
   padding: 8px 8px 8px 24px;
   justify-content: center;
   align-items: center;
   gap: 30px;
-
   border-radius: 40px;
   border: 1px solid var(--White-white-700, #B5B5B5);
   background: var(--White-white-50, #FFF);
 }
-
 .moredetails-button label {
   color: var(--Black-black-500, #000);
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.14px;
