@@ -37,12 +37,12 @@
         </div>
         <div class="product-price">
           <div class="price-main">
-            <span class="price-symbol">$</span>
+            <div class="price-symbol">$</div>
             <span class="price-amount">28</span>
           </div>
           <div class="price-info">
             <span class="price-original">$35.99</span>
-            <span class="discount-tag">22% off</span>
+            <div class="discount-tag"><label for=""> 22% off</label></div>
           </div>
         </div>
         <div class="moredetails-button">
@@ -95,30 +95,42 @@ export default {
 
 /* Container principal */
 .container {
-  width: 1400px;
-  height: 928px;
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
   border-radius: 30px;
   background: #F3F5F9;
+  padding: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+
 }
+
 
 /* Estrutura do produto */
 .product-main {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-left: 153px;
-  gap: 80px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px; 
 }
+
 
 /* Informações do produto */
 .product-info {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   color: #000;
   font-family: Inter;
-  font-size: 48px;
+  font-size: 3rem; 
   font-weight: 600;
-  line-height: 56px;
-  letter-spacing: -0.96px;
+  text-align: left; 
 }
+
+
 .product-info h2 {
   text-align: justify;
 }
@@ -127,7 +139,6 @@ export default {
 .product-img {
   width: 601px;
   height: 646px;
-  padding: 0 153px 0 0;
   overflow: hidden; /* Evita que a imagem saia do contêiner */
   position: relative;
 }
@@ -254,16 +265,23 @@ export default {
   font-size: 18px;
   text-decoration: line-through;
 }
+
 .discount-tag {
+  position: relative;
   display: flex;
-  padding: 6px 14px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 40px !important;
-  border-image: linear-gradient(to right, #CD43FF, #FD65A6, #FC9651, #FFBD72, #CD43FF) 1 round;
-  border-width: 2px;
-  border-style: solid;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #CD43FF, #FD65A6, #FC9651, #FFBD72, #CD43FF);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.discount-tag label {
+  padding: 8px 24px; 
+  font-size: 20px; 
+  font-weight: 400;
 }
 
 /* Botão de mais detalhes */
