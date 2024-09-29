@@ -22,7 +22,7 @@
       <button class="shop-now">
         SHOP NOW
         <div class="button_icon">
-          <img src="../assets/icons/seta.png" alt="Seta" />
+          <img src="../assets/icons/Vector.png" alt="Seta" />
         </div>
       </button>
       <p class="details">Ends 18/08. Restrictions apply. See details</p>
@@ -84,8 +84,6 @@ window.onload = function() {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
   margin: 50px;
   display: flex;
@@ -93,27 +91,25 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
-  font-family: Inter;
 }
 
 .promo-container {
   position: relative;
+  font-family: Inter;
   width: 1320px;
   height: 645px;
   margin: 0 auto;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
-  padding: 60px;
   align-items: center;
+  padding: 60px;
   border-radius: 30px;
   border: 1px solid #000;
-  color: #FFF;
-  position: relative;
   background-image: url('../assets/images/background.jpg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center;  
+  color: #FFF;
 }
 
 .promo-content {
@@ -125,30 +121,29 @@ body {
   gap: 20px;
 }
 
+.promo-text h1, .promo-text p, .timer, .details, .shop-now {
+  margin-left: 80px;
+}
+
 .promo-text h1 {
   color: #FFF;
-  font-family: Inter;
   font-size: 80px;
   font-weight: 600;
   line-height: 80px;
   letter-spacing: -3.2px;
   margin-top: 53px;
-  margin-left: 101px;
 }
 
-.promo-text p {
-  font-size: 1.5em;
-  margin-left: 101px;
+.promo-text p, .details {
   font-weight: 400;
-  font-family: Inter;
+  font-size: 1.5em;
+  color: #FFF;
 }
 
 .timer {
   display: flex;
   gap: 68.51px;
-  font-family: Inter;
   align-items: center;
-  margin-left: 101px;
 }
 
 .time-section {
@@ -163,7 +158,6 @@ body {
 
 .time-section p {
   font-size: 24px;
-  font-family: Inter;
   color: #FFF;
   margin-top: -15px;
   text-transform: uppercase;
@@ -179,23 +173,20 @@ body {
   background-color: #FFF;
   color: #000;
   border: 2px solid #E2E2E2;
-  padding: 8px;
-  padding-left: 22px;
+  padding: 8px 22px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-left: 101px;
-  transition: background-color 0.3s, color 0.3s;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .shop-now:hover {
   background-color: #548CAD;
-  color: #000000;
+  color: #000;
 }
 
 .button_icon {
@@ -219,26 +210,16 @@ body {
   background-color: #FFF;
 }
 
-.details {
-  font-size: 1em;
-  margin-left: 101px;
-  color: #FFF;
-  font-family: Inter;
-  margin-bottom: 61px;
-}
-
 .promo-image {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   margin-right: 65px;
-  position: relative;
 }
 
 .promo-image img {
   width: 490px;
   height: 509px;
-  flex-shrink: 0;
   position: relative;
   z-index: 2;
 }
@@ -247,7 +228,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-42.5%, -10%);
+  transform: translate(-42.5%, -1);
   z-index: 1;
   width: 701px;
   height: 309px;
@@ -259,11 +240,6 @@ body {
   animation: scroll 1s infinite linear;
 }
 
-@keyframes scroll {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-160px); }
-}
-
 .numbers div {
   height: 80px;
   display: flex;
@@ -271,50 +247,70 @@ body {
   align-items: center;
 }
 
+
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-160px); }
+}
+
 @media screen and (max-width: 1024px) {
   .promo-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-  }
-
-  .promo-content {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .promo-image {
-    justify-content: center;
-  }
-
-  .promo-image img {
-    width: 250px;
-  }
-
-  .background-svg {
-    width: 350px; 
     height: auto;
   }
 
+  .promo-content {
+    max-width: 80%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .promo-text h1 {
+    font-size: 48px;
+    line-height: 52px;
+    margin-left: 0;
+  }
+
+  .promo-text p, .details, .timer {
+    margin-left: 0;
+  }
+
+  .timer {
+    gap: 40px;
+  }
+
+  .time-section span {
+    font-size: 80px;
+  }
+
+  .promo-image img {
+    width: 400px;
+    height: auto;
+  }
+
+  .background-svg {
+    width: 100%; 
+    max-width: 450px;
+  }
+
   .shop-now {
-    width: 120px;
-    height: 42px;
-    font-size: 10px;
+    max-width: 150px;
+    height: 45px;
+    font-size: 12px;
+    align-items: center;
+    margin-left: 0;
   }
 
   .details {
-    font-size: 0.8em;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .promo-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .promo-content {
-    max-width: 100%;
+    padding: 30px;
   }
 
   .promo-text h1 {
@@ -327,60 +323,97 @@ body {
   }
 
   .time-section span {
-    font-size: 60px;
+    font-size: 70px;
   }
 
   .promo-image img {
-    width: 200px;
+    width: 50%;
   }
 
   .background-svg {
-    width: 300px; 
+    max-width: 350px;
   }
 
   .shop-now {
-    width: 110px;
+    max-width: 140px;
     height: 40px;
+    font-size: 11px;
+  }
+
+  .details {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promo-container {
+    padding: 20px;
+  }
+
+  .promo-text h1 {
+    font-size: 28px;
+  }
+
+  .promo-text p {
+    font-size: 1.2em;
+  }
+
+  .time-section span {
+    font-size: 55px;
+  }
+
+  .promo-image img {
+    width: 40%;
+  }
+
+  .background-svg {
+    max-width: 280px;
+  }
+
+  .shop-now {
+    max-width: 120px;
+    height: 35px;
     font-size: 10px;
   }
 
   .details {
-    font-size: 0.75em;
+    font-size: 9px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .promo-container {
-    padding: 20px;
-    height: auto;
+    padding: 15px;
   }
 
   .promo-text h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
-  .promo-text p {
-    font-size: 1em;
+  .timer {
+    gap: 10px;
   }
 
   .time-section span {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .promo-image img {
-    width: 200px;
+    width: 35%;
   }
 
   .background-svg {
-    width: 300px; 
+    max-width: 220px;
   }
 
   .shop-now {
-    width: 100px;
+    max-width: 100px;
+    height: 30px;
+    font-size: 8px;
   }
 
   .details {
-    font-size: 0.75em;
+    font-size: 8px;
   }
 }
 </style>
