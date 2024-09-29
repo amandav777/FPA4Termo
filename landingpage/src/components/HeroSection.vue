@@ -6,8 +6,17 @@
 
         trocar dps
     </div> -->
-
     <div class="hero-section">
+        <div class="angled-banner">
+            <div class="banner-text">
+            <p v-html="repeatText"></p>
+          </div>        
+        </div>
+        <div class="second-banner">
+            <div class="banner-text2">
+            <p v-html="repeatText"></p>
+          </div>      
+          </div>
         <div class="hero-section-container">
             <div class="align-horizontal" style="gap: 80px;">
                 <div class="left-container">
@@ -64,11 +73,100 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+
+const repeatText = ref(Array(300).fill('your text here &#10022;').join(' '));
 </script>
 
 <style scoped>
-/* assets de texto abaixo! :) */
+.angled-banner {
+  position: absolute;
+  width: 110%;
+  height: 2.6vw;
+  background-color: black;
+  transform: rotate(30deg);
+  top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  right: -400px; 
+  font-size: 0.73vw;
+  color: white;
+  z-index: -1;
+}
+
+.second-banner {
+  position: absolute;
+  width: 50%; 
+  height: 2.6vw; 
+  background-color: black;
+  transform: rotate(-20deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  right: -500px;
+  top: 350px;
+  font-size: 0.73vw;
+  color: white;
+  z-index: -2;
+}
+
+.banner-text, .banner-text2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  white-space: nowrap;
+  color: var(--White-white-50, #FFF);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.banner-text {
+  animation: moveLeftRight 60s linear infinite;
+}
+
+.banner-text2 {
+  animation: moveRightLeft 80s ease-in-out infinite;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100vw);
+  }
+  75% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100vw);
+  }
+  75% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 h1 {
     color: var(--Black-black-500, #000);
     font-family: Inter;
