@@ -6,6 +6,7 @@
           <img :src="currentImage" alt="Main Product image" class="product-image" :key="selectedColor">
         </transition-group>
       </section>
+      
       <aside class="product-info">
         <h2>JBL Children's Bluetooth Headphones</h2>
         <div class="product-rating">
@@ -116,6 +117,7 @@ export default {
   min-height: 646px; 
   padding-top: 141px; 
   padding-bottom: 141px; 
+
 }
 
 
@@ -142,8 +144,8 @@ export default {
 
 /* Imagem do produto */
 .product-img {
-  width: 601px;
-  height: 646px;
+  width: 37.563rem;
+  height: 40.375rem;
   overflow: hidden;
   position: relative;
 }
@@ -161,7 +163,7 @@ export default {
 
 /* Animações */
 .swap-up-enter-active, .swap-up-leave-active {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .swap-up-enter-from {
   transform: translateY(100%);
@@ -174,7 +176,7 @@ export default {
 }
 
 .swap-down-enter-active, .swap-down-leave-active {
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .swap-down-enter-from {
   transform: translateY(-100%);
@@ -190,15 +192,14 @@ export default {
 .product-rating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
 }
 .product-rating p {
   color: var(--Info-100, #17F);
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.16px;
+  line-height: 1.5rem;
 }
 
 /* Opções de cores */
@@ -208,21 +209,20 @@ export default {
 .color-info {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
   position: relative;
 }
 .color-info img {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .color-info p {
   color: var(--Base-100, #1F2026);
   font-family: Inter;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.2px;
+  line-height: 1.75rem;
 }
 .color-info button {
   background-color: #F3F5F9;
@@ -232,8 +232,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-color: transparent;
 }
 .color-1-button, .color-2-button {
@@ -248,32 +248,32 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 0.938rem;
   gap: 0.625rem;
   position: relative;
 }
 .price-main {
   display: flex;
   align-items: center;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 700;
 }
 .price-symbol {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 0.313rem;
   align-self: start;
   top: 0;
   left: 0;
 }
 .price-amount {
-  font-size: 90px;
+  font-size: 5.625rem;
 }
 .price-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 7px;
+  gap: 0.438rem;
 }
 .price-original {
   font-size: 1.5rem;
@@ -285,16 +285,15 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   border: 2px solid transparent;
   background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #CD43FF, #FD65A6, #FC9651, #FFBD72, #CD43FF);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
 .discount-tag label {
-  gap: 15px;
-  padding: 8px 24px; 
+  gap: 0.625rem;
+  padding: 0.5rem 1.5rem; 
   font-size: 1.25rem; 
   font-weight: 700;
 }
@@ -306,7 +305,7 @@ export default {
 /* Botão de mais detalhes */
 .moredetails-button button {
   display: flex;
-  padding: 12px 24px; 
+  padding: 0.75rem 1.5rem; 
   justify-content: space-between; 
   align-items: center;
   gap:1.875rem;
@@ -317,10 +316,9 @@ export default {
 }
 .moredetails-button label {
   color: var(--Black-black-500, #000);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.14px;
+  line-height: 1.5rem;
   text-transform: uppercase;
 }
 /* Responsavidade */
