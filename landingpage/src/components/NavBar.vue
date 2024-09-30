@@ -111,12 +111,12 @@ export default {
         .dropdown .dropdown-content {
         display: block;
         }
-        /* Logo */
+       
         .navbar img {
         width: 135px;
         height: 26px;
         flex-shrink: 0;
-        margin-left: 20px;
+        margin-left: 50px;
         }
 
         .navbar .nav-links {
@@ -138,6 +138,7 @@ export default {
             padding: 10px;
         }
 
+
         .navbar .nav-actions {
         color: var(--Black-black-500, #000);
         text-align: center;
@@ -154,7 +155,9 @@ export default {
 
         .navbar .nav-actions a {
         color: var(--Black-black-500, #000);
+        text-decoration: none;
         padding: 10px 20px;
         }
+
 
 </style>
