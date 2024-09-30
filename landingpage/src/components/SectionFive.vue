@@ -62,25 +62,22 @@
 export default {
   data() {
   return {
-    selectedColor: 'color1', // Cor inicial
-    currentImage: require('../assets/images/product.png'), // Imagem inicial
+    selectedColor: 'color1', 
+    currentImage: require('../assets/images/product.png'), 
     images: {
       color1: require('../assets/images/product.png'),
       color2: require('../assets/images/product2.png')
     },
-    animationDirection: 'swap-down' // Define a animação inicial
+    animationDirection: 'swap-down' 
   };
 },
   methods: {
     changeColor(color) {
       if (this.selectedColor !== color) {
-        // Ajuste a animação com base na cor selecionada
         this.animationDirection = color === 'color1' ? 'swap-up' : 'swap-down';
         
-        // Atualize a imagem correspondente
         this.currentImage = this.images[color];
         
-        // Atualize a cor selecionada
         this.selectedColor = color;
       }
     }
@@ -147,7 +144,7 @@ export default {
 .product-img {
   width: 601px;
   height: 646px;
-  overflow: hidden; /* Evita que a imagem saia do contêiner */
+  overflow: hidden;
   position: relative;
 }
 .product-image {
@@ -302,13 +299,17 @@ export default {
   font-weight: 700;
 }
 
+.moredetails-button {
+  margin-top: 2rem;
+}
+
 /* Botão de mais detalhes */
 .moredetails-button button {
   display: flex;
   padding: 12px 24px; 
   justify-content: space-between; 
   align-items: center;
-  gap: 10px;
+  gap:1.875rem;
   border-radius: 40px;
   border: 1px solid #B5B5B5;
   background-color: #FFF;
